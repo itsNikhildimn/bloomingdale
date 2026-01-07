@@ -1,0 +1,32 @@
+steps:
+# Extract '.env' file
+- name: 'gcr.io/cloud-builders/gcloud'
+  entrypoint: 'bash'
+  args: ['-c', "gcloud secrets versions access latest --secret=bloom-env-cloudrun --format='get(payload.data)' | tr '_-' '/+' | base64 -d > env.cloudrun"]
+# Build Docker image
+- name: 'gcr.io/cloud-builders/docker'
+  args:
+  - 'build'
+  - '--tag=${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPO}/bloom'
+  - '.'
+# Push image to Artifact Repository
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', '${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPO}/bloom']
+# Deploy & activate new version of Strapi service
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: 'gcloud'
+  args:
+  - 'run'
+  - 'deploy'
+  - 'bloom'
+  - '--service-account=bloom-website@${PROJECT_ID}.iam.gserviceaccount.com'
+  - '--image=${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPO}/bloom:latest'
+  - '--region=${_REGION}'
+  - '--platform=managed'
+  - '--allow-unauthenticated'
+  - '--min-instances=1'
+  - '--memory=2Gi'
+
+substitutions:
+  _REGION: asia-south1
+  _REPO: bloom-website

@@ -1,0 +1,270 @@
+/* 
+BTN options:
+Always add basic .btn
+
+For 'learn more' add a color e.g .btn.btn-organge
+For 'learn more' alt (no background) .btn.alt
+Or, for calculate btn simply .btn.btn-calc
+*/
+
+/* BTN BASIC */
+.btn {
+	/* margin-bottom: 10px; */
+	box-sizing: border-box;
+	cursor: pointer;
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: 500;
+	border: none;
+	display: inline-flex;
+	align-items: center;
+	position: relative;
+	white-space: nowrap;
+	text-decoration: none;
+	border-radius: 1000px;
+	padding: 0.65em 0.7em;
+	line-height: 1;
+}
+.btn span {
+	/* color: white; */
+	margin-right: 0.8em;
+	margin-left: 0.8em;
+}
+
+/* BTN Orange */
+.btn-orange {
+	color: white;
+	background-color: var(--brand-colors-orange);
+	transition: color var(--hover-transition-length), background-color var(--hover-transition-length);
+}
+
+.btn-orange:hover {
+	background-color: var(--brand-colors-orange-hover);
+	/* color: var(--brand-colors-orange-hover); */
+}
+
+/* BTN Orange opposite */
+.btn-orange.opposite {
+	color: var(--brand-colors-orange);
+	background-color: white;
+	transition: color var(--hover-transition-length), background-color var(--hover-transition-length);
+}
+
+.btn-orange.opposite:hover {
+	color: var(--brand-colors-orange-hover);
+}
+
+/* BTN Blue */
+.btn-blue {
+	color: white;
+	background-color: var(--brand-colors-blue);
+	transition: color var(--hover-transition-length), background-color var(--hover-transition-length);
+}
+
+.btn-blue:hover {
+	background-color: var(--brand-colors-blue-hover);
+}
+
+/* BTN Purple */
+.btn-purple {
+	color: white;
+	background-color: var(--brand-colors-purple);
+	transition: color var(--hover-transition-length), background-color var(--hover-transition-length);
+}
+
+.btn-purple:hover {
+	background-color: var(--brand-colors-purple-hover);
+}
+
+/* BTN Lime */
+.btn-lime {
+	color: white;
+	background-color: var(--brand-colors-lime);
+	transition: color var(--hover-transition-length), background-color var(--hover-transition-length);
+}
+
+.btn-lime:hover {
+	background-color: var(--brand-colors-lime-hover);
+}
+
+/* BTN Red */
+.btn-red {
+	color: white;
+	background-color: var(--brand-colors-red);
+	transition: color var(--hover-transition-length), background-color var(--hover-transition-length);
+}
+
+.btn-lime:hover {
+	background-color: var(--brand-colors-red-hover);
+}
+
+/* BTN (Black and white) Eyp */
+.btn-bw {
+	color: black;
+	background-color: white;
+	transition: color var(--hover-transition-length), background-color var(--hover-transition-length);
+}
+
+.btn-bw:hover {
+	color: var(--brand-colors-orange);
+}
+
+.btn-red svg,
+.btn-orange svg,
+.btn-blue svg,
+.btn-purple svg,
+.btn-lime svg,
+.btn-alt svg,
+.btn-bw svg {
+	width: 28px;
+	height: 28px;
+}
+
+/* BTN Alt */
+.btn-alt {
+	background-color: transparent;
+	color: var(--secondary-black);
+	transition: color var(--hover-transition-length);
+	padding-left: 0;
+}
+
+.btn-alt span {
+	margin-left: 0;
+	color: var(--secondary-black);
+	transition: color var(--hover-transition-length);
+}
+
+.btn-alt:hover,
+.btn-alt:hover span {
+	color: var(--brand-colors-orange);
+}
+
+/* BTN Calculate (and enquiry) */
+.btn-calc {
+	padding: 0.812em 0.9em;
+	background-color: white;
+	border: 2px solid white;
+	color: var(--brand-colors-orange);
+	transition: color var(--hover-transition-length);
+}
+
+.btn-calc span {
+	color: var(--brand-colors-orange);
+	transition: color var(--hover-transition-length);
+}
+
+.btn-calc:hover,
+.btn-calc:hover span {
+	background-color: white;
+	color: var(--brand-colors-orange-hover);
+}
+
+.btn-calc svg {
+	height: 32px;
+	width: 32px;
+}
+
+/* BTN Calculate Blue */
+.btn-calc.blue {
+	color: var(--brand-colors-blue);
+	transition: color var(--hover-transition-length);
+}
+
+.btn-calc.blue span {
+	color: var(--brand-colors-blue);
+	transition: color var(--hover-transition-length);
+}
+
+.btn-calc.blue:hover,
+.btn-calc.blue:hover span {
+	color: var(--brand-colors-blue-hover);
+}
+
+/* BTN Calculate Orange */
+.btn-calc.orange {
+	color: var(--brand-colors-orange);
+	transition: color var(--hover-transition-length);
+}
+
+.btn-calc.orange span {
+	color: var(--brand-colors-orange);
+	transition: color var(--hover-transition-length);
+}
+
+.btn-calc.orange:hover,
+.btn-calc.orange:hover span {
+	color: var(--brand-colors-orange-hover);
+}
+
+/* BTN Dropdown */
+
+.btn-dropdown {
+	background-color: transparent;
+	color: var(--brand-colors-orange);
+	transition: color 0.5s;
+	border: var(--white-opaque) 2px solid;
+}
+
+.btn-dropdown span {
+	text-align: right;
+	/* width: 25.7px; */
+	color: var(--white);
+	transition: color 0.5s;
+}
+
+.btn-dropdown .svg-container {
+	height: 32px;
+	width: 32px;
+	display: flex;
+	align-items: center;
+}
+
+.btn-dropdown svg path {
+	stroke: white;
+}
+
+.btn-calc {
+	padding: 0.812em 0.9em;
+}
+
+.btn-dropdown {
+	padding: 0.812em 1.8em;
+}
+
+/* MOBILE */
+@media only screen and (max-width: 768px) {
+	/* BTN */
+
+	.btn {
+		font-size: 14px;
+		line-height: 14px;
+	}
+
+	.btn-orange svg,
+	.btn-blue svg,
+	.btn-purple svg,
+	.btn-lime svg,
+	.btn-alt svg,
+	.btn-bw svg,
+	.btn-calc svg,
+	.btn-dropdown .svg-container {
+		width: 24px;
+		height: 24px;
+	}
+
+	.btn-calc {
+		padding: 0.65em 0.9em;
+	}
+
+	.btn.btn-dropdown {
+		/* width: 76.9688px; */
+		padding: 0.65em 1.8em;
+	}
+}
+
+@media (max-width: 768px) {
+	#admission .form .btn-calc.orange {
+		width: 100%;
+		justify-content: center;
+	}
+}

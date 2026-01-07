@@ -1,0 +1,315 @@
+@font-face {
+	font-family: 'SuisseIntl';
+	src: url('$lib/font/SuisseIntl-Medium.otf') format('opentype');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SuisseIntl';
+	src: url('$lib/font/SuisseIntl-Regular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SuisseIntl';
+	src: url('$lib/font/SuisseScreen-Monitor-WebM.otf') format('opentype');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'SuisseIntl';
+	src: url('$lib/font/SuisseScreen-Thin-WebM.otf') format('opentype');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+html,
+body {
+	overscroll-behavior-x: none;
+}
+
+:root {
+	--gutter: 4vw;
+	--negative-margin: -2.5rem;
+	--b-r-section: 2.5rem;
+	--b-r-container: 1.5rem;
+	/* Colors */
+	--brand-colors-mint: #a6d6c9;
+	--brand-colors-yellow: #efdb34;
+	--brand-colors-orange: hsla(31, 73%, 53%, 1);
+	--brand-colors-blue: hsla(207, 66%, 63%, 1);
+	--brand-colors-purple: hsla(292, 34%, 45%, 1);
+	--brand-colors-lime: hsla(65, 67%, 56%, 1);
+	--brand-colors-red: hsl(0, 62%, 61%);
+	--brand-colors-orange-hover: hsla(31, 87%, 60%, 1);
+	--brand-colors-blue-hover: hsla(207, 97%, 75%, 1);
+	--brand-colors-purple-hover: hsla(292, 35%, 56%, 1);
+	--brand-colors-lime-hover: hsla(65, 62%, 52%, 1);
+	--brand-colors-red-hover: hsl(0, 43%, 50%);
+	--brand-colors-disabled: #a8adb5;
+	--gradient-blue-orange: linear-gradient(0deg, #caefff 0%, #effffd 23.3%, #fff0d0 82.39%);
+	--gradient-blue-orange-reverse: linear-gradient(#caefff 0%, #effffd 23.3%, #fff0d0 82.39%);
+	--brand-colors-blue-dark: hsl(206, 40%, 24%);
+	--secondary-black: #1e1515;
+	--secondary-black-o60: #1e151599;
+	--grey: hsl(0, 2%, 46%); /* use this instead of secondary-black-o60 */
+	--secondary-dark-blue: #254b6a;
+	--white: #fff;
+	--white-opaque: hsla(0, 0%, 100%, 0.6);
+	/* Transition length */
+	--hover-transition-length: 0.35s;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	outline: 0;
+}
+
+button {
+	all: unset;
+	display: inline-block;
+}
+
+*,
+*::after,
+*::before {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'SuisseIntl', sans-serif;
+}
+
+select {
+	outline: none;
+}
+
+body {
+	margin: 0;
+	font-weight: 400;
+	font-size: 16px;
+	color: var(--secondary-black);
+}
+
+a,
+button,
+.logo,
+.menu-icon {
+	cursor: pointer;
+}
+
+img {
+	display: block;
+}
+
+.shadow {
+	-webkit-box-shadow: 0px 0px 40px -14px rgba(0, 0, 0, 0.07);
+	-moz-box-shadow: 0px 0px 40px -14px rgba(0, 0, 0, 0.07);
+	box-shadow: 0px 0px 40px -14px rgba(0, 0, 0, 0.07);
+}
+/* Small Circular portait images */
+.small-circle-portrait {
+	border: rgb(141 88 58) 0.3em solid;
+	border-radius: 50%;
+	height: 4rem;
+	width: 4rem;
+	display: inline-block;
+	overflow: hidden;
+}
+
+/* Border Radius */
+.b-r-section {
+	border-radius: 2.5rem;
+}
+
+.b-r-container {
+	border-radius: 1.5rem;
+}
+
+/* Font weights are 400 aside from the following */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+	font-weight: 400;
+}
+
+a,
+buttons,
+.stat-nums-text,
+.sm-heading,
+.testimonial,
+.name {
+	font-weight: 500;
+}
+
+.frame,
+.h-frame,
+.b-frame {
+	overflow-y: hidden;
+}
+.h-frame {
+	margin-bottom: 40px;
+}
+
+.b-frame {
+	margin-bottom: 40px;
+}
+
+/* text sizes */
+.band-text {
+	/* font-size: 160px; */
+	/* equal to 160px at 1440 screen width */
+	font-size: 11.111vw;
+	font-weight: 400;
+}
+
+.hero-text,
+.stat-nums-text {
+	font-size: 80px; /* mob 52 */
+	line-height: 80px; /* mob 52 */
+
+	font-size: 80px;
+	line-height: 64px;
+	height: 81px;
+}
+
+.chairmans-name-text {
+	font-size: 32px;
+}
+
+.lg-header-text {
+	font-size: 56px; /* mob 32 */
+	line-height: 67.2px; /* mob 38.4 */
+}
+
+.md-header-text {
+	font-size: 36px; /* mob 28 */
+	line-height: 43.2px; /* mob 33.6 */
+}
+
+.lg-body-text,
+.sm-header-text {
+	font-size: 20px; /* mob 18 */
+	line-height: 28px; /* mob 25.2 */
+}
+.sm-header-text {
+	margin-bottom: 1rem;
+}
+
+.sm-body-text {
+	font-size: 16px; /* mob 14 */
+	line-height: 22.4px; /* mob 19.6 */
+}
+
+.xs-body-text {
+	font-size: 14px;
+}
+
+.author {
+	font-weight: 500;
+	font-size: 20px;
+}
+
+.relation-to-student {
+	color: rgb(160, 160, 160);
+	font-size: 16px;
+}
+
+.wrapper {
+	padding: 100px var(--gutter) 100px;
+}
+
+@media only screen and (max-width: 1060px) {
+	/* Inner padding */
+	.wrapper {
+		padding: 76px var(--gutter) 0;
+	}
+
+	/* Text sizes */
+	.band-text {
+		font-size: 160px;
+	}
+}
+
+@media only screen and (max-width: 964px) {
+	/* was 768*/
+
+	:root {
+		--negative-margin: -2rem;
+		--b-r-section: 2rem;
+	}
+
+	.h-frame {
+		margin-bottom: 32px;
+	}
+
+	.hero-text,
+	.stat-nums-text {
+		font-size: 52px;
+		line-height: 52px;
+		font-size: 52px;
+		height: 52px;
+	}
+
+	.small-circle-portrait {
+		height: 3.2rem;
+		width: 3.2rem;
+	}
+
+	.chairmans-name-text {
+		font-size: 24px;
+		margin-bottom: 0.5rem;
+	}
+
+	.lg-header-text {
+		font-size: 32px;
+		line-height: 38.4px;
+	}
+
+	.md-header-text {
+		font-size: 28px;
+		line-height: 33.6px;
+	}
+
+	.lg-body-text,
+	.sm-header-text {
+		font-size: 18px;
+		line-height: 25.2px;
+	}
+
+	.sm-body-text {
+		font-size: 14px;
+		line-height: 19.6px;
+	}
+
+	.xs-body-text {
+		font-size: 12px;
+	}
+
+	.author {
+		font-size: 16px;
+	}
+	.relation-to-student {
+		font-weight: 400;
+		font-size: 12px;
+	}
+}
+
+/* MOBILE */
+@media only screen and (max-width: 480px) {
+	/* Border radius */
+	.b-r-section {
+		border-radius: 2rem;
+	}
+}

@@ -1,0 +1,3 @@
+dispatch:
+  - url: "*/strapi/*"
+    service: strapi

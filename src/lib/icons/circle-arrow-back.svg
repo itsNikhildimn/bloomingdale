@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke="black">
+  <g id="circle-arrow-back" transform="matrix(0.5,0,0,0.5,0,0)"
+    fill="none"  stroke-linejoin="round" stroke-linecap="round"
+  >
+    <circle cx="24" cy="24" r="23" stroke-width="2"/>
+    <path d="M31.75,23.726L16.75,23.726" stroke-width="1.5"/>
+    <path d="M25.703,17.701L31.753,23.725L25.703,29.75" stroke-width="1.5"/>
+  </g>
+</svg>

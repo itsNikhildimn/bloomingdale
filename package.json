@@ -1,0 +1,44 @@
+{
+	"name": "bloomingdale",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write .",
+		"gcp-build": ""
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/adapter-node": "^1.2.3",
+		"@sveltejs/kit": "^1.20.4",
+		"eslint": "^8.28.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-svelte": "^3.5.1",
+		"globals": "^16.0.0",
+		"prettier": "^2.8.0",
+		"prettier-plugin-svelte": "^2.10.1",
+		"svelte": "^4.0.0",
+		"svelte-adapter-appengine": "^0.10.2",
+		"vite": "^4.2.0"
+	},
+	"type": "module",
+	"dependencies": {
+		"@rgossiaux/svelte-headlessui": "^2.0.0",
+		"date-fns": "^2.29.3",
+		"date-picker-svelte": "^2.10.0",
+		"flag-icons": "^6.6.6",
+		"gsap": "^3.11.5",
+		"nodemailer": "^6.9.2",
+		"sqlite3": "^5.1.6",
+		"svelte-markdown": "^0.4.1",
+		"typescript": "^5.0.3"
+	},
+	"overrides": {
+		"@rgossiaux/svelte-headlessui": {
+			"svelte": "^4.0.0"
+		}
+	}
+}
